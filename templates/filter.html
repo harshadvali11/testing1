@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Displying the content after applying filters</h1>
+        {{data}}<br>
+        {{data|upper}}<br>
+        {{data|lower}}<br>
+        {{data|title}}<br>
+        {% if data|length < 15 %}
+            {{data|length}}<br>
+        {% endif %}
+
+        {{dates|date:'A M D Y'}}<br>
+        {{data|truncatewords:'2'}}<br>
+        {{data|truncatechars:'5'}}<br>
+        {{data|slice:'2'}}
+
+        <br>
+
+        <br>
+        <h1>i have {{count}} dog{{count|pluralize}}</h1>
+        <h1>i have {{count}} mango{{count|pluralize:'es'}}</h1>
+        <h1>these {{count}} dog{{count|pluralize}} {{count|pluralize:'is,are'}} mine</h1>
+
+
+
+
+        
+    </center>
+</body>
+</html>
